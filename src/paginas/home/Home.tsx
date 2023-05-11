@@ -1,11 +1,9 @@
-import"./Home.css"
-
+import React from "react"
+import "./Home.css"
 
 function Home() {
     return (
-
-
-        <div>
+        <>
             <ul>
                 <li><a href="Index.html">Home</a></li>
                 <li><a href="Contato.html">Contato</a></li>
@@ -20,20 +18,18 @@ function Home() {
                 sempre procurando aprender coisas novas.</p>
             <p>Este site foi criado como um projeto de prática para me ajudar a desenvolver minhas habilidades de HTML.
             </p>
-                <h2>Meu video favorito</h2>
+            <h2>Meu video favorito</h2>
 
-                <p><iframe width="800" height="600" src="https://www.youtube.com/embed/bS4Q-WWyl3Q"
-                    title="&quot;Toss A Coin To Your Witcher&quot; METAL COVER" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe></p>
-                <footer>
-                    <p>
-                        Todos os direitos reservados: Giovanni Santos &copy
-                    </p>
-
-                </footer>
-        </div>
+            <p><iframe width="800" height="600" src="https://www.youtube.com/embed/bS4Q-WWyl3Q"
+                title="&quot;Toss A Coin To Your Witcher&quot; METAL COVER" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe></p>
+            <footer>
+                <p>
+                    Todos os direitos reservados: Giovanni Santos &copy
+                </p>
+            </footer>
+        </>
     )
 }
-
-export default Home
+export default Home;
