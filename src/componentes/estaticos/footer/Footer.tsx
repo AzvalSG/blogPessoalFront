@@ -17,10 +17,10 @@ function Footer() {
                         <Box display="flex" alignItems="center" justifyContent="center">
 
                             <a href="https://www.linkedin.com/in/giovanni-santos-5395551b7/" target="_blank" rel="noopener noreferrer">
-                                <LinkedInIcon style={{ fontSize: 60, color: "white" }} />
+                                <LinkedInIcon className='redes'/>
                             </a>
                             <a href="https://github.com/AzvalSG" target="_blank" rel="noopener noreferrer">
-                                <GitHubIcon className='redes'/>
+                                <GitHubIcon className='redes1'/>
                             </a>
                         </Box>
                     </Box>
