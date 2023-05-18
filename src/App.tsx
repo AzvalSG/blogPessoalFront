@@ -5,20 +5,22 @@ import Navbar from './componentes/estaticos/navbar/Navbar'
 import Home from './paginas/home/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './paginas/login/Login';
+import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
 function App() {
-  return(
+  return (
     <BrowserRouter>
-    <Navbar />
-    <div style={{ minHeight: '100vh' }}>
-    <Routes> // Antigo Switch
-    <Route path="/" element={<Login />} />
-    <Route path="/login" element={<Login />} />
-    <Route path="/home" element={<Home />} />
-    </Routes>
-    </div>
-    <Footer />
+      <Navbar />
+      <div style={{ minHeight: '100vh' }}>
+        <Routes> // Antigo Switch
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/cadastrousuario" element={<CadastroUsuario />} />
+        </Routes>
+      </div>
+      <Footer />
     </BrowserRouter>
-    )
+  )
 }
 
 export default App
