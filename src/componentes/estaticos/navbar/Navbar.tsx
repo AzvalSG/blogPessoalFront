@@ -2,8 +2,20 @@ import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import { Navigate } from 'react-router-dom';
 function Navbar() {
+    const[token, setToken] = useLocalStorage('token');
+    let navigate = useNavigate();
+
+function goLogout(){
+    setToken('')
+    alert('usuario deslogado com sucesso')
+    navigate('/login')
+}
+
+
     return (
         <>
             <AppBar className='AppBar' position="static">
@@ -22,22 +34,22 @@ function Navbar() {
                         </Box>
                         <Box className='Box' mx={1} >
                             <Typography className='Typography Typography:hover' variant="h6" color="inherit">
-                            <Link to='/' >Postagens</Link>
+                            <Link to='/posts' >Postagens</Link>
                             </Typography>
                         </Box>
                         <Box className='Box' mx={1} >
                             <Typography className='Typography Typography:hover' variant="h6" color="inherit">
-                            <Link to='/' >Temas</Link>
+                            <Link to='/temas' >Temas</Link>
                             </Typography>
                         </Box>
                         <Box className='Box' mx={1} >
                             <Typography className='Typography Typography:hover' variant="h6" color="inherit">
-                            <Link to='/' >Cadastrar Tema</Link>
+                            <Link to='/formularioTema' >Cadastrar Tema</Link>
                             </Typography>
                         </Box>
-                        <Box className='Box' mx={1} >
+                        <Box className='Box' mx={1} onClick = {goLogout} >
                             <Typography className='Typography Typography:hover' variant="h6" color="inherit">
-                            <Link to='/' >Logout</Link>
+                            Logout
                             </Typography>
                         </Box>
                     </Box>

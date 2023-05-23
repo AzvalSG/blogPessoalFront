@@ -1,10 +1,9 @@
-import React , {useState, useEffect, ChangeEvent } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Button, Grid, TextField, Typography } from '@material-ui/core';
+import { Box } from '@mui/material';
+import { ChangeEvent, useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import User from '../../models/User';
 import { cadastroUsuario } from '../../services/Service';
-import { Grid,Typography, Button, TextField } from '@material-ui/core';
-import {Box} from '@mui/material';
-import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
 
 function CadastroUsuario() {
@@ -73,9 +72,11 @@ function CadastroUsuario() {
                                     Cancelar
                                 </Button>
                             </Link>
+                            <Link to='/login' className='text-decorator-none'>
                             <Button type='submit' variant='contained' color='primary'>
                                     Cadastrar
                             </Button>
+                            </Link>
                         </Box>
                     </form>
                 </Box>
